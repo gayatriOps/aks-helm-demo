@@ -1,0 +1,12 @@
+{
+  "name": "aks-helm-demo",
+  "version": "1.0.0",
+  "description": "Simple Node.js app for AKS Helm demo",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
