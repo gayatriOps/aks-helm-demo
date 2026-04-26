@@ -1,0 +1,15 @@
+# Ignore Terraform local cache and state
+.terraform/
+*.tfstate
+*.tfstate.backup
+
+# Node.js
+node_modules/
+npm-debug.log
+
+# VS Code
+.vscode/
+
+# Docker
+*.log
+
