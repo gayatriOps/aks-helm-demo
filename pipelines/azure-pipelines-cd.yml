@@ -1,0 +1,21 @@
+trigger:
+- main
+
+stages:
+- stage: DeployDev
+  jobs:
+  - job: HelmDeployDev
+    steps:
+    - task: HelmDeploy@0
+      inputs:
+        connectionType: 'Azure Resource Manager'
+        azureSubscription: 'aks-helm-arm-svc'
+        azureResourceGroup: 'aks-demo-rg'
+        kubernetesCluster: 'aks-helm-demo-svc'
+        namespace: 'dev'
+        command: 'upgrade'
+        chartType: 'FilePath'
+        chartPath: 'helm'
+        releaseName: 'aks-helm-demo-dev'
+        overrideValues: |
+          image.tag=$(Build.BuildId)

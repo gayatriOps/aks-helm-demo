@@ -1,0 +1,6 @@
+apiVersion: v2
+name: aks-helm-demo
+description: A simple Node.js app deployed to AKS with Helm
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
